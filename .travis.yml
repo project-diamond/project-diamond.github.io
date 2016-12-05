@@ -27,7 +27,8 @@ addons:
   apt:
     packages:
       - libgmp-dev
-
+      - imagemagick
+      - asymptote
 before_install:
 # Download and unpack the stack executable
 - mkdir -p ~/.local/bin
@@ -41,6 +42,7 @@ install:
 script:
 # Build the package, its tests, and its docs and run the tests
 - stack --no-terminal test --haddock --no-haddock-deps
+- make -C logo
 - stack exec website build
 - stack exec website check
 
