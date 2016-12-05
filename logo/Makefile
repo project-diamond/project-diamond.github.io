@@ -1,6 +1,6 @@
 .PHONY: clean all
 
-all: diamond3d.png diamond3d.ico
+all: diamond3d.png diamond3d.ico diamond3d_transparent.png
 
 diamond3d.png : diamond3d.asy
 	asy -f png -render 100  diamond3d.asy
