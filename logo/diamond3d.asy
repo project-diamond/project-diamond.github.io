@@ -9,7 +9,7 @@ pen  silver = hsv(0,0,0.6);     // metalic silver
 path  sec = (1,0)--(-1,0)--(-1,-0.5)--(1,-0.5)--cycle;
 path3 circle3(real r) { return path3(Circle((0,0),r)); }
 
-currentprojection=perspective(0,0,1);
+currentprojection=perspective(1,0,1);
 currentlight=light(1,1,0.1);
 
 material mat;
