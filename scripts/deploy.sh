@@ -9,13 +9,11 @@ git checkout develop
 
 # build logo
 make -C logo
-
-# Build new files
-stack exec website clean
+stack build
 stack exec website build
 
 # Get previous files
-git fetch --all "$DEPLOY_REMOTE"
+git fetch --all
 git checkout -b master --track "$DEPLOY_REMOTE/master"
 
 # Overwrite existing files with new files
