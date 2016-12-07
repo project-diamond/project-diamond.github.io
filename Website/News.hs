@@ -15,10 +15,6 @@ import System.FilePath
 import Config
 import Website.Utils
 
-
-categories :: [FilePath]
-categories = ["posts", "jobs", "events"]
-
 newsRules :: Rules ()
 newsRules = match allNewsPat $ do
   route cleanRoute
@@ -57,13 +53,11 @@ allNewsField :: Context a
 allNewsField = newsField "news" allNewsPat
 
 rootPageNews = listField "news" newsCxt $ fmap (take frontPageNewsItems) $ loadAll allNewsPat >>= recentFirst
+
 ---------------------- Various patterns -------------------------------
 
-categoryPat :: FilePath -> Pattern
-categoryPat fp = fromString $ "news" </> fp </> "*"
-
 allNewsPat :: Pattern
-allNewsPat = foldl1 (.||.) $ categoryPat <$> categories
+allNewsPat = "news/*.md"
 
 ----------------------- Pattern based ---------------------------------
 
