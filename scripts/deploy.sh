@@ -10,6 +10,7 @@ git checkout develop
 # build logo
 make -C logo
 stack build
+stack exec website clean
 stack exec website build
 
 # Get previous files
