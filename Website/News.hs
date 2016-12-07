@@ -20,14 +20,24 @@ newsRules = match allNewsPat $ do
   route cleanRoute
   compile $ newsCompiler
 
+  -- Make atom feed.
+  create ["atom.xml"] $ do
+    route idRoute
+    compile $ do
+      posts <- fmap (take feedNewsItems) . recentFirst =<<
+               loadAllSnapshots allNewsPat "content"
+      let atomCxt = newsCxt <> bodyField "description"
+        in renderAtom feedConfig atomCxt posts
+
   -- Make the list of news.
   listOfNewsRule "Archive" "news" allNewsPat
 
 
 newsCompiler :: Compiler (Item String)
 newsCompiler = pandocCompiler
-               >>= postProcessTemplates newsCxt [ "templates/post.html"
-                                                , "templates/default.html"
+               >>= postProcessTemplates newsCxt [ "templates/post.html" ]
+               >>= saveSnapshot "content"
+               >>= postProcessTemplates newsCxt [ "templates/default.html"
                                                 , "templates/wrapper.html"
                                                 ]
 
