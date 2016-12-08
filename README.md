@@ -44,6 +44,22 @@ git push origin -u topic # and send pull request from topic
 
 ```
 
+
+
+## Editing the contents
+
+Most of the time the only things that you want to edit is the contents
+of this website.  You _do not_ need to know Haskell to edit the
+contents. Please update the appropriate markdown file in this
+repository and send us a pull request. The news items are available in
+the directory `news`. The file names there needs to be in the format
+`DD-MM-YYYY-Title-of-the-news-item.md`. If you want to add a news
+item, it is best to just copy an existing news item and edit it.
+
+However, if your aim is to change the way the site is built, then you
+would need to know enough Haskell to edit `site.hs` file.
+
+
 ## Unconventional branch structure.
 
 This repository has two branches the `master` and `develop`.  The
@@ -56,14 +72,6 @@ contains the master branch, you can/should delete it. The deployment
 of the website is done using the script [`scripts/deploy.sh`][deploy]
 For more details on this work flow see the tutorial
 <https://jaspervdj.be/hakyll/tutorials/github-pages-tutorial.html>.
-
-
-## Editing the contents
-
-You do not need to know haskell to edit the contents. Please update
-the appropriate markdown file in this repository and send us a pull
-request. The news items are available in the directory `news`. The
-file names there needs to be in the format `DD-MM-YYYY-Title.md`
 
 
 [indian curry]: <https://project-diamond.github.io> "Indian curry homepage"
