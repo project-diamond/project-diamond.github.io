@@ -46,12 +46,17 @@ git push origin -u topic # and send pull request from topic
 
 ## Unconventional branch structure.
 
-This repository has two branches the `master` and `develop`. Since
-this repository servers also as github pages for our website, the
-contents of the master branch are the raw html/css/media files are not
-of interest for the developer.  The actual source for the website
-resides in the `develop` branch. For more details see the tutorial
+This repository has two branches the `master` and `develop`.  The
+actual source for the website resides in the `develop` branch which is
+the one you should be cloning and sending pull request to if you want
+to hack on this website. The `master` branch merely has the raw
+html/css/media files and serves as the github page for the site
+<https://project-diamond.github.io>. So if by mistake your clone
+contains the master branch, you can/should delete it. The deployment
+of the website is done using the script [`scripts/deploy.sh`][deploy]
+For more details on this work flow see the tutorial
 <https://jaspervdj.be/hakyll/tutorials/github-pages-tutorial.html>.
+
 
 ## Editing the contents
 
@@ -71,3 +76,4 @@ file names there needs to be in the format `DD-MM-YYYY-Title.md`
 [waffle-inprogress]: <https://badge.waffle.io/project-diamond/project-diamond.github.io.svg?label=waffle%3Ain%20progress&title=In%20Progress>
 [travis-status]: <https://travis-ci.org/project-diamond/project-diamond.github.io.svg?branch=develop> "Build status"
 [travis-project-diamond]: <https://travis-ci.org/project-diamond/project-diamond.github.io> "Build status"
+[deploy]: <https://github.com/project-diamond/project-diamond.github.io/blob/develop/scripts/deploy.sh> "Deployment script"
