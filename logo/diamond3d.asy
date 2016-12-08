@@ -6,15 +6,17 @@ import graph;
 // Colours and material to make the logo.
 
 //pen  goldenPenOld = hsv(51, .37, .47);
-pen  goldenPenOld = hsv(49, 0.71, 0.81);
-pen  goldenPen  = hsv(46,0.80,0.7); // metalic gold
-pen  silverPen  = hsv(0,0,0.);     // metalic silver
+pen goldenPenOld = hsv(49, 0.71, 0.81);
+pen goldenPen  = hsv(46,0.80,0.7);     // metalic gold
+
+pen silverPenOld = hsv(60,.2,.52);
+pen silverPen  = hsv(0,0,0.6);     // metalic silver
 
 material gold   = material(goldenPenOld, specularpen=goldenPen, shininess=0);
-material silver = material(silverPen, specularpen=white, shininess=0.01);
+material silver = material(silverPenOld, specularpen=silverPen, shininess=0);
 
 currentprojection=perspective(1,0,1);
-currentlight=light(1,1,0.1);
+currentlight=light(0.5,0.5,0.1);
 
 
 
