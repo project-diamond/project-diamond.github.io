@@ -3,21 +3,36 @@ import three;
 
 import graph;
 
-pen  golden = hsv(46,0.80,0.7); // metalic gold
-pen  silver = hsv(0,0,0.6);     // metalic silver
+// Colours and material to make the logo.
 
-path  sec = (1,0)--(-1,0)--(-1,-0.5)--(1,-0.5)--cycle;
-path3 circle3(real r) { return path3(Circle((0,0),r)); }
+//pen  goldenPenOld = hsv(51, .37, .47);
+pen  goldenPenOld = hsv(49, 0.71, 0.81);
+pen  goldenPen  = hsv(46,0.80,0.7); // metalic gold
+pen  silverPen  = hsv(0,0,0.);     // metalic silver
+
+material gold   = material(goldenPenOld, specularpen=goldenPen, shininess=0);
+material silver = material(silverPen, specularpen=white, shininess=0.01);
 
 currentprojection=perspective(1,0,1);
 currentlight=light(1,1,0.1);
 
-material mat;
 
-material mat(pen p){ return material(p,diffusepen=p,emissivepen=p,specularpen=white, shininess=1); }
 
-draw(tube(circle3(1.2), scale(0.1)  * sec),surfacepen=mat(golden));
-draw(tube(circle3(0.5), yscale(0.05) * xscale(0.7)  * sec), surfacepen=mat(silver));
+
+// Section used for engraving in gold.
+path  sec = (1,0)--(-1,0)--(-1,-0.5)--(1,-0.5)--cycle;
+
+// path used to build the circular coin.
+path3 circle3(real r) { return path3(Circle((0,0),r)); }
+
+
+// engrave the edge of the coin with gold
+draw(tube(circle3(1.2), scale(0.1)  * sec),surfacepen=gold);
+
+// engrave the inside of the coin with silver.
+draw(tube(circle3(0.5), yscale(0.05) * xscale(0.7)  * sec), surfacepen=silver);
+
+
 
 // The edward curve  x^2 + y^2 = 1 - d x^2 y^2 representing the diamond.
 real d      = 42;
@@ -35,4 +50,5 @@ real extreem=1 - mid;
 path3 edwardsPath = path3(graph(edwardsCurve, 0 , 2 * pi));
 path3 engraving   = roundedpath(edwardsPath, 0.05);
 
-draw(tube(engraving, scale(0.07) * sec ), surfacepen=mat(golden));
+// engrave the edward's curve in the middle of the coin.
+draw(tube(engraving, scale(0.07) * sec ), surfacepen=gold);
