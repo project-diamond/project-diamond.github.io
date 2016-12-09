@@ -13,7 +13,7 @@ real time, micro-payments of large economies like that of India.
 
 ## Contributions.
 
-One of the topics that we wish to explore blind signature based
+One of the topics that we wish to explore is blind signature based
 digital currency along the lines of Chaum's [digicash] or the more
 recent [Gnu taler][taler] system. We would like to scale these so that
 it is possible to:
@@ -24,7 +24,7 @@ it is possible to:
    feature phones.
 
 Besides, we would like to explore other financial instruments like
-cheques which are relatively less challenging cryptographically than
+cheques, which are relatively less challenging cryptographically than
 digital currency.
 
 
@@ -52,7 +52,7 @@ commitments. If you, or your employer wish to lock some of your
 contributions under intellectual property laws, _do not_ send us those
 pull requests.
 
-Finally a note on caution. While every effort will be made to ensure
+Finally a note of caution. While every effort will be made to ensure
 that the artefacts that we develop would be secure they come _without
 any warranties_. You cannot hold us responsible for any direct or
 indirect damages that might result from using them.
