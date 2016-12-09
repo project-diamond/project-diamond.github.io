@@ -28,12 +28,12 @@
     <hr />
     <p>Project Diamond is an attempt to build a monetary system for digital economy which is backed by strong cryptography. The goal is to research and build software libraries, protocols, and other tools that can sustain high volumes of monetary transactions at very low overheads. In particular, the system should be capable of handling, in real time, micro-payments of large economies like that of India.</p>
 <h2 id="contributions.">Contributions.</h2>
-<p>One of the topics that we wish to explore blind signature based digital currency along the lines of Chaum’s <a href="https://en.wikipedia.org/wiki/DigiCash">digicash</a> or the more recent <a href="https://taler.net/">Gnu taler</a> system. We would like to scale these so that it is possible to:</p>
+<p>One of the topics that we wish to explore is blind signature based digital currency along the lines of Chaum’s <a href="https://en.wikipedia.org/wiki/DigiCash">digicash</a> or the more recent <a href="https://taler.net/">Gnu taler</a> system. We would like to scale these so that it is possible to:</p>
 <ol style="list-style-type: decimal">
 <li><p>Make micro-payments is real time.</p></li>
 <li><p>Make transactions using low end phones, i.e. ones that are called feature phones.</p></li>
 </ol>
-<p>Besides, we would like to explore other financial instruments like cheques which are relatively less challenging cryptographically than digital currency.</p>
+<p>Besides, we would like to explore other financial instruments like cheques, which are relatively less challenging cryptographically than digital currency.</p>
 <h2 id="commitment-to-open-standards.">Commitment to open standards.</h2>
 <p>Monetary systems are community resources and hence should be free from vendor lock-in unlike some of the payment systems that are popular currently. Project Diamond aims to be a community project that follows the best practices of the world of free and open source software. In particular, we pledge to</p>
 <ol style="list-style-type: decimal">
@@ -41,7 +41,7 @@
 <li><p><em>Not</em> enforce any kind of “intellectual property rights” on any of the ideas, software or protocols developed as part of this project.</p></li>
 </ol>
 <p>We welcome contributions from anyone as long as it <em>does not</em> hinder our commitments listed above. Contributions to our projects should be through public pull requests to our repositories and we consider such a pull request as an agreement by the author to adhere the above commitments. If you, or your employer wish to lock some of your contributions under intellectual property laws, <em>do not</em> send us those pull requests.</p>
-<p>Finally a note on caution. While every effort will be made to ensure that the artefacts that we develop would be secure they come <em>without any warranties</em>. You cannot hold us responsible for any direct or indirect damages that might result from using them.</p>
+<p>Finally a note of caution. While every effort will be made to ensure that the artefacts that we develop would be secure they come <em>without any warranties</em>. You cannot hold us responsible for any direct or indirect damages that might result from using them.</p>
   </div>
 </div>
 ]]></summary>
